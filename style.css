@@ -48,6 +48,18 @@ body {
   background: linear-gradient(315deg, var(--bg-bright), var(--bg-dark));
 }
 
+/* GENERAL ELEMNTS */
+button {
+  border: none;
+  outline: none;
+  border-radius: var(--btn-border-radius);
+  cursor: pointer;
+  font-size: var(--btn-font-size);
+  position: relative;
+  color: var(--btn-color);
+  transition: var(--btn-transition);
+}
+
 /* STRUCTURAL ELEMENTS */
 .wrapper {
   display: flex;
