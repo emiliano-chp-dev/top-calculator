@@ -100,16 +100,33 @@ function main() {
 
   // Rounds a number
   function round(num) {
-    return Math.round(number * 1000) / 1000;
+    return Math.round(num * 1000) / 1000;
   }
 
   // Updates the display
   function updateDisplay() {
     currentOperandElement.innerText = state.currentOperand;
     previousOperandElement.innerText = state.operation
-      ? `${separate(state.previousOperand)} ${state.operation}`
+      ? `${state.previousOperand} ${state.operation}`
       : '';
   }
+
+  // Attach event listeners to buttons
+  function attachEventListeners() {
+    clearBtn.addEventListener('click', clear);
+    deleteBtn.addEventListener('click', del);
+    signBtn.addEventListener('click', compute);
+
+    operands.forEach(btn =>
+      btn.addEventListener('click', () => append(btn.innerText))
+    );
+
+    operators.forEach(btn =>
+      btn.addEventListener('click', () => operate(btn.innerText))
+    );
+  }
+
+  attachEventListeners();
 
   // ...
 }
