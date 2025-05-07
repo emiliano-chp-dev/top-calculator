@@ -120,9 +120,9 @@ function main() {
 
   // Updates the display
   function updateDisplay() {
-    currentOperandElement.innerText = state.currentOperand;
+    currentOperandElement.innerText = separate(state.currentOperand);
     previousOperandElement.innerText = state.operation
-      ? `${state.previousOperand} ${state.operation}`
+      ? `${separate(state.previousOperand)} ${state.operation}`
       : '';
   }
 
