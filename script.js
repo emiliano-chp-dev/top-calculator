@@ -131,6 +131,7 @@ function main() {
     clearBtn.addEventListener('click', clear);
     deleteBtn.addEventListener('click', del);
     signBtn.addEventListener('click', compute);
+    equalsBtn.addEventListener('click', compute);
 
     operands.forEach(btn =>
       btn.addEventListener('click', () => append(btn.innerText))
