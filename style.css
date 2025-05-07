@@ -145,3 +145,7 @@ button:active {
 .__wide {
   grid-column: span 2;
 }
+
+.operand {
+  background-color: var(--operand-bg-color);
+}
