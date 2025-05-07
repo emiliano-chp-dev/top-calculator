@@ -25,18 +25,21 @@ function main() {
     state.operation = undefined;
     previousOperandElement.innerText = '';
     currentOperandElement.innerText = '';
+    updateDisplay();
   }
 
   // Deletes last number in the current operand
   function del() {
     state.currentOperand = state.currentOperand.toString().slice(0, -1);
     currentOperandElement.innerText = state.currentOperand;
+    updateDisplay();
   }
 
   // Toggles the sign of the current operand
   function toggleSign() {
     if (state.currentOperand === '') return;
     state.currentOperand = (parseFloat(state.currentOperand) * -1).toString();
+    updateDisplay();
   }
 
   // Appends a number to the current operand
@@ -44,6 +47,7 @@ function main() {
     if (num === '.' && state.currentOperand.includes('.')) return;
     state.currentOperand += num;
     currentOperandElement.innerText = state.currentOperand;
+    updateDisplay();
   }
 
   // Sets the operation and moves the current operand to the previous operand
@@ -54,6 +58,7 @@ function main() {
     state.operation = operation;
     state.previousOperand = state.currentOperand;
     state.currentOperand = '';
+    updateDisplay();
   }
 
   // Handles computation
@@ -90,11 +95,20 @@ function main() {
     state.currentOperand = round(computation).toString();
     state.previousOperand = '';
     state.operation = undefined;
+    updateDisplay();
   }
 
   // Rounds a number
   function round(num) {
     return Math.round(number * 1000) / 1000;
+  }
+
+  // Updates the display
+  function updateDisplay() {
+    currentOperandElement.innerText = state.currentOperand;
+    previousOperandElement.innerText = state.operation
+      ? `${separate(state.previousOperand)} ${state.operation}`
+      : '';
   }
 
   // ...
