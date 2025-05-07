@@ -103,6 +103,21 @@ function main() {
     return Math.round(num * 1000) / 1000;
   }
 
+  // Formats a number with commas
+  function separate(num) {
+    const stringNumber = num.toString();
+    const integerDigits = parseFloat(stringNumber.split('.')[0]);
+    const decimalDigits = stringNumber.split('.')[1];
+
+    let integerDisplay = isNaN(integerDigits)
+      ? ''
+      : integerDigits.toLocaleString('en', { maximumFractionDigits: 0 });
+
+    if (decimalDigits !== undefined)
+      return `${integerDisplay}.${decimalDigits}`;
+    else return integerDisplay;
+  }
+
   // Updates the display
   function updateDisplay() {
     currentOperandElement.innerText = state.currentOperand;
