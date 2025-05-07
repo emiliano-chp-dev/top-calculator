@@ -141,3 +141,7 @@ button:active {
   font-size: var(--current-operand-font-size);
   color: var(--current-operand-color);
 }
+
+.__wide {
+  grid-column: span 2;
+}
