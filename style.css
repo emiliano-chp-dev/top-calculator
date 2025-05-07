@@ -30,3 +30,12 @@
   --footer-color: rgba(134, 60, 11, 0.5);
   --box-shadow-opacity: 0.3;
 }
+
+/* HTML elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+}
