@@ -159,6 +159,10 @@ button:active {
   background-color: var(--clear-delete-bg-color);
 }
 
+#equals {
+  background-color: var(--equals-bg-color);
+}
+
 .operand:hover {
   color: var(--operand-hover-color);
 }
@@ -170,4 +174,8 @@ button:active {
 
 .__action:hover {
   color: var(--clear-delete-hover-color);
+}
+
+#equals:hover {
+  color: var(--equals-hover-color);
 }
