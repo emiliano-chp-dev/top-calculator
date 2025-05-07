@@ -18,6 +18,7 @@ function main() {
     operation: undefined,
   };
 
+  // Clears state
   function clear() {
     state.previousOperand = '';
     state.currentOperand = '';
@@ -26,20 +27,33 @@ function main() {
     currentOperandElement.innerText = '';
   }
 
+  // Deletes last number in the current operand
   function del() {
     state.currentOperand = state.currentOperand.toString().slice(0, -1);
     currentOperandElement.innerText = state.currentOperand;
   }
 
-  function toggleSide() {
+  // Toggles the sign of the current operand
+  function toggleSign() {
     if (state.currentOperand === '') return;
     state.currentOperand = (parseFloat(state.currentOperand) * -1).toString();
   }
 
+  // Appends a number to the current operand
   function append(num) {
     if (num === '.' && state.currentOperand.includes('.')) return;
     state.currentOperand += num;
     currentOperandElement.innerText = state.currentOperand;
+  }
+
+  // Sets the operation and moves the current operand to the previous operand
+  function operate(operation) {
+    if (state.currentOperand === '') return;
+    if (state.previousOperand !== '') compute();
+
+    state.operation = operation;
+    state.previousOperand = state.currentOperand;
+    state.currentOperand = '';
   }
 
   // ...
