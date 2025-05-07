@@ -77,6 +77,11 @@ button::before {
   width: 90%;
 }
 
+button:hover {
+  box-shadow: var(--btn-hover-box-shadow);
+  transform: scale(1.05);
+}
+
 /* STRUCTURAL ELEMENTS */
 .wrapper {
   display: flex;
