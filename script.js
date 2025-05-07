@@ -31,6 +31,11 @@ function main() {
     currentOperandElement.innerText = state.currentOperand;
   }
 
+  function toggleSide() {
+    if (state.currentOperand === '') return;
+    state.currentOperand = (parseFloat(state.currentOperand) * -1).toString();
+  }
+
   // ...
 }
 
