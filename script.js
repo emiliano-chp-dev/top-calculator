@@ -26,6 +26,11 @@ function main() {
     currentOperandElement.innerText = '';
   }
 
+  function del() {
+    state.currentOperand = state.currentOperand.toString().slice(0, -1);
+    currentOperandElement.innerText = state.currentOperand;
+  }
+
   // ...
 }
 
