@@ -84,3 +84,22 @@ body {
   word-break: break-all;
   background-color: var(--display-bg-color);
 }
+
+.__display-element {
+  height: 3rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+}
+
+.previous-operand {
+  font-size: var(--previous-operand-font-size);
+  font-style: italic;
+  color: var(--previous-operand-color);
+}
+
+.current-operand {
+  font-size: var(--current-operand-font-size);
+  color: var(--current-operand-color);
+}
