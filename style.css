@@ -82,6 +82,10 @@ button:hover {
   transform: scale(1.05);
 }
 
+button:active {
+  transform: scale(0.95);
+}
+
 /* STRUCTURAL ELEMENTS */
 .wrapper {
   display: flex;
