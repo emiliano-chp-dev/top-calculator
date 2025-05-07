@@ -1,0 +1,32 @@
+/* IMPORTS */
+@import url(https://fonts.bunny.net/css?family=noto-sans:400,700);
+
+/* CSS variables */
+:root {
+  --bg-bright: #f7ed6b;
+  --bg-dark: #c64c59;
+  --font-family: 'Noto Sans', sans-serif;
+  --font-weight: 400;
+  --btn-border-radius: 35px;
+  --btn-font-size: 1.6rem;
+  --btn-color: rgba(0, 0, 0, 0.4);
+  --btn-transition: transform 0.1s;
+  --btn-hover-box-shadow: rgba(255, 255, 255, 0.9) 0 3px 2px inset,
+    rgba(0, 0, 0, 0.4) 0 3px 5px, rgba(0, 0, 0, 0.1) 0 10px 13px;
+  --display-bg-color: rgba(0, 0, 0, 0.45);
+  --display-border-radius: 25px;
+  --previous-operand-color: rgba(255, 255, 255, 0.75);
+  --previous-operand-font-size: 1.5rem;
+  --current-operand-color: #ffffff;
+  --current-operand-font-size: 2.5rem;
+  --operand-bg-color: rgba(1, 255, 221, 0.527);
+  --operand-hover-color: rgba(229, 255, 0, 0.89);
+  --operator-bg-color: rgba(1, 217, 255, 0.527);
+  --operator-hover-color: rgba(0, 255, 13, 0.89);
+  --clear-delete-bg-color: rgba(255, 52, 1, 0.527);
+  --clear-delete-hover-color: rgb(255, 0, 0);
+  --equals-bg-color: rgba(255, 208, 1, 0.603);
+  --equals-hover-color: rgb(255, 94, 0);
+  --footer-color: rgba(134, 60, 11, 0.5);
+  --box-shadow-opacity: 0.3;
+}
