@@ -154,3 +154,7 @@ button:active {
 #dot {
   background-color: var(--operator-bg-color);
 }
+
+.__action {
+  background-color: var(--clear-delete-bg-color);
+}
