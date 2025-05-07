@@ -11,6 +11,21 @@ function main() {
   const operands = [...document.querySelectorAll('.operand')];
   const operators = [...document.querySelectorAll('.operator')];
 
+  // Handles state
+  const state = {
+    previousOperand: '',
+    currentOperand: '',
+    operation: undefined,
+  };
+
+  function clear() {
+    state.previousOperand = '';
+    state.currentOperand = '';
+    state.operation = undefined;
+    previousOperandElement.innerText = '';
+    currentOperandElement.innerText = '';
+  }
+
   // ...
 }
 
