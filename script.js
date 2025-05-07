@@ -36,6 +36,12 @@ function main() {
     state.currentOperand = (parseFloat(state.currentOperand) * -1).toString();
   }
 
+  function append(num) {
+    if (num === '.' && state.currentOperand.includes('.')) return;
+    state.currentOperand += num;
+    currentOperandElement.innerText = state.currentOperand;
+  }
+
   // ...
 }
 
