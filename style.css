@@ -39,3 +39,11 @@
   font-family: var(--font-family);
   font-weight: var(--font-weight);
 }
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-bright);
+  background: linear-gradient(315deg, var(--bg-bright), var(--bg-dark));
+}
