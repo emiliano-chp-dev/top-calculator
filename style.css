@@ -149,3 +149,8 @@ button:active {
 .operand {
   background-color: var(--operand-bg-color);
 }
+
+.operator,
+#dot {
+  background-color: var(--operator-bg-color);
+}
