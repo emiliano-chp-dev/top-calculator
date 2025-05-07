@@ -162,3 +162,8 @@ button:active {
 .operand:hover {
   color: var(--operand-hover-color);
 }
+
+.operator:hover,
+#dot.hover {
+  color: var(--operator-hover-color);
+}
