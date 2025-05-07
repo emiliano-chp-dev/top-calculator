@@ -56,6 +56,42 @@ function main() {
     state.currentOperand = '';
   }
 
+  // Handles computation
+  function compute() {
+    let computation;
+    const prev = parseFloat(state.previousOperand);
+    const curr = parseFloat(state.currentOperand);
+
+    if (isNaN(prev) || isNaN(curr)) return;
+
+    if (curr === 0 && state.operation === '/') {
+      alert('Cannot divide by 0');
+      clear();
+      return;
+    }
+
+    switch (state.operation) {
+      case '+':
+        computation = prev + curr;
+        break;
+      case '-':
+        computation = prev - curr;
+        break;
+      case '*':
+        computation = prev * curr;
+        break;
+      case '/':
+        computation = prev / curr;
+        break;
+      default:
+        return;
+    }
+
+    state.currentOperand = round(computation).toString();
+    state.previousOperand = '';
+    state.operation = undefined;
+  }
+
   // ...
 }
 
