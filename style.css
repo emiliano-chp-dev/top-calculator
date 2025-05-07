@@ -60,6 +60,23 @@ button {
   transition: var(--btn-transition);
 }
 
+button::before {
+  background-color: initial;
+  background-image: linear-gradient(
+    rgb(255, 255, 255) 0,
+    rgba(255, 255, 255, 1) 100%
+  );
+  border-radius: 125px;
+  content: '';
+  height: 87%;
+  left: 4%;
+  opacity: var(--box-shadow-opacity);
+  position: absolute;
+  top: 0;
+  transition: all 0.3s;
+  width: 90%;
+}
+
 /* STRUCTURAL ELEMENTS */
 .wrapper {
   display: flex;
