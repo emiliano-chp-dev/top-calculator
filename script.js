@@ -5,11 +5,12 @@ function main() {
   const [previousOperandElement, currentOperandElement] = [
     ...document.querySelectorAll('.__display-element'),
   ];
-  const [clearBtn, deleteBtn, signBtn, equalsBtn] = [
-    ...document.querySelectorAll('.__action'),
-  ];
-  const operands = [...document.querySelectorAll('.operand')];
-  const operators = [...document.querySelectorAll('.operator')];
+  //   const [clearBtn, deleteBtn, signBtn, equalsBtn] = [
+  //     ...document.querySelectorAll('.__action'),
+  //   ];
+  //   const operands = [...document.querySelectorAll('.operand')];
+  //   const operators = [...document.querySelectorAll('.operator')];
+  const calculatorElement = document.querySelector('.calculator');
 
   // Handles state
   const state = {
@@ -126,23 +127,28 @@ function main() {
       : '';
   }
 
-  // Attach event listeners to buttons
-  function attachEventListeners() {
-    clearBtn.addEventListener('click', clear);
-    deleteBtn.addEventListener('click', del);
-    signBtn.addEventListener('click', compute);
-    equalsBtn.addEventListener('click', compute);
+  // Delegate events
+  function delegateEvents() {
+    calculatorElement.addEventListener('click', event => {
+      let target = event.target;
 
-    operands.forEach(btn =>
-      btn.addEventListener('click', () => append(btn.innerText))
-    );
-
-    operators.forEach(btn =>
-      btn.addEventListener('click', () => operate(btn.innerText))
-    );
+      if (target.classList.contains('clear')) {
+        clear();
+      } else if (target.classList.contains('delete')) {
+        del();
+      } else if (target.classList.contains('sign')) {
+        compute();
+      } else if (target.id === 'equals') {
+        compute();
+      } else if (target.classList.contains('operand')) {
+        append(target.innerText);
+      } else if (target.classList.contains('operator')) {
+        operate(target.innerText);
+      }
+    });
   }
 
-  attachEventListeners();
+  delegateEvents();
 
   // ...
 }
