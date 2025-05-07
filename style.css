@@ -167,3 +167,7 @@ button:active {
 #dot.hover {
   color: var(--operator-hover-color);
 }
+
+.__action:hover {
+  color: var(--clear-delete-hover-color);
+}
