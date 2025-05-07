@@ -92,6 +92,11 @@ function main() {
     state.operation = undefined;
   }
 
+  // Rounds a number
+  function round(num) {
+    return Math.round(number * 1000) / 1000;
+  }
+
   // ...
 }
 
