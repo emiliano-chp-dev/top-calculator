@@ -179,3 +179,8 @@ button:active {
 #equals:hover {
   color: var(--equals-hover-color);
 }
+
+.footer {
+  min-height: 5vh;
+  color: var(--footer-color);
+}
